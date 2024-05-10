@@ -31,7 +31,7 @@ select * from 고객 where 도시 like '%광역시' and (고객번호 like '_c%'
 
 /*1번 문제*/
 select * from 고객 where 도시='서울특별시' and 마일리지 >= 15000 and 마일리지 <= 20000;
-/*select * from 고객 where 도시='서울특별시' and 마일리지 between 15000 and 20000;*
+/*select * from 고객 where 도시='서울특별시' and 마일리지 between 15000 and 20000;*/
 
 /*2번 문제*/
 select distinct 지역,도시 from 고객 order by 1;
@@ -81,8 +81,6 @@ select field('JAVA', 'SQL', 'JAVA', 'C')
 ,find_in_set('JAVA', 'SQL,JAVA,C')
 ,instr('네 인생을 살아라','인생')	/* 인생의 위치 */
 ,locate('인생', '네 인생을 살아라');
-
-select repeat('*',5);  /* ‘*’ 5개 반복 */
 
 select replace('010.1234.5678', '.', '-');  /* ‘.’로 구분되어 있는 전화번호의 구분자를 */
 
@@ -165,7 +163,7 @@ select nullif(12*10, 120)
 
 #case when 마일리지 >= 10000 then 'vvip고객' 
 
-
+--------------------------------------------------------------------------------
 #문제1
 select 고객회사명, concat('**', left(고객회사명, 2)) as 고객회사명2, 전화번호, substr(replace(전화번호,')','-'), 2) as 전화번호2 from 고객;
 
@@ -212,3 +210,4 @@ select 주문번호,
 요청일,
 발송일,
 datediff(발송일, 요청일) as 지원일수 from 주문 where datediff(발송일, 요청일) >=7;
+--------------------------------------------------------------------------------
